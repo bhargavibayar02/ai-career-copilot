@@ -1,1 +1,226 @@
+/* =========================
+   🌍 GLOBAL STYLES
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
 
+/* =========================
+   📦 CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =========================
+   🧠 HEADER
+========================= */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* =========================
+   🟢 STATUS BAR
+========================= */
+.status {
+  background: #022c22;
+  color: #4ade80;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* =========================
+   📂 UPLOAD SECTION
+========================= */
+.upload-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.upload-section input {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   🔘 BUTTONS
+========================= */
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* =========================
+   ⚡ ACTION BUTTONS
+========================= */
+.actions {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   💬 CHAT CONTAINER
+========================= */
+.chat-container {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* =========================
+   💬 MESSAGES
+========================= */
+.message {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  max-width: 80%;
+  animation: fadeIn 0.4s ease;
+}
+
+.bot {
+  background: #334155;
+  text-align: left;
+}
+
+.user {
+  background: #38bdf8;
+  color: black;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* =========================
+   ✍️ CHAT INPUT
+========================= */
+.chat-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 5px;
+}
+
+/* =========================
+   ⏳ LOADING
+========================= */
+#loading {
+  text-align: center;
+  margin: 10px;
+  color: #38bdf8;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   ❌ ERROR BOX
+========================= */
+.error {
+  background: #7f1d1d;
+  color: #fecaca;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* =========================
+   📊 CARD (CHART + ROADMAP)
+========================= */
+.card {
+  background: #1e293b;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* =========================
+   📊 CHART
+========================= */
+canvas {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+}
+
+/* =========================
+   🧭 ROADMAP
+========================= */
+#roadmap ul {
+  padding-left: 20px;
+}
+
+#roadmap li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   ✨ ANIMATIONS
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
