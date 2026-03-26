@@ -1,7 +1,7 @@
 // ============================
 // 🔐 CONFIG
 // ============================
-const API_KEY = "YOUR_GROQ_API_KEY";
+const API_KEY = "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";
 
 // ============================
 // 💬 CHAT UI
