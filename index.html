@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Impact-Bot 🚀</title>
+  <title>Impact-Bot </title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -19,13 +19,13 @@
 
     <!-- HEADER -->
     <header class="header">
-      <h1>🤖 Impact-Bot</h1>
+      <h1> Impact-Bot</h1>
       <p class="subtitle">AI Resume Analyzer + Career Copilot</p>
     </header>
 
     <!-- SYSTEM STATUS (GUARDRAILS VISIBILITY) -->
     <div id="statusBar" class="status">
-      🟢 System Ready | Guardrails Active
+      System Ready | Guardrails Active
     </div>
 
     <!-- FILE UPLOAD -->
@@ -40,9 +40,9 @@
 
     <!-- QUICK ACTION BUTTONS -->
     <section class="actions">
-      <button onclick="quickAction('skills')">🧠 Improve Skills</button>
-      <button onclick="quickAction('jobs')">💼 Find Jobs</button>
-      <button onclick="quickAction('roadmap')">🧭 Career Path</button>
+      <button onclick="quickAction('skills')"> Improve Skills</button>
+      <button onclick="quickAction('jobs')"> Find Jobs</button>
+      <button onclick="quickAction('roadmap')"> Career Path</button>
     </section>
 
     <!-- CHATBOT UI -->
@@ -64,7 +64,7 @@
 
     <!-- LOADING INDICATOR -->
     <div id="loading" class="hidden">
-      🤖 Securely analyzing your resume...
+       Securely analyzing your resume...
     </div>
 
     <!-- ERROR / REFUSAL BOX -->
@@ -72,13 +72,13 @@
 
     <!-- SCORE VISUALIZATION -->
     <section class="card">
-      <h3>📊 Resume Score</h3>
+      <h3> Resume Score</h3>
       <canvas id="scoreChart"></canvas>
     </section>
 
     <!-- CAREER ROADMAP -->
     <section class="card">
-      <h3>🧭 Career Roadmap</h3>
+      <h3> Career Roadmap</h3>
       <div id="roadmap">
         Upload your resume to generate a personalized roadmap...
       </div>
@@ -103,12 +103,12 @@
 
       if (typeof window.typingEffect === "function") {
         window.typingEffect(
-          "🤖 Hello! I’m Impact-Bot 🚀\n\n" +
+          " Hello! I’m Impact-Bot \n\n" +
           "I analyze resumes, detect skill gaps, and suggest jobs.\n\n" +
           "Upload your resume to begin."
         );
       } else {
-        fallbackMessage("🤖 Upload your resume to get started.");
+        fallbackMessage(" Upload your resume to get started.");
       }
     };
   </script>
