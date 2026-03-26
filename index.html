@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impact-Bot 🚀</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>🤖 Impact-Bot</h1>
+      <p class="subtitle">AI Resume Analyzer + Career Copilot</p>
+    </header>
+
+    <!-- SYSTEM STATUS (GUARDRAILS VISIBILITY) -->
+    <div id="statusBar" class="status">
+      🟢 System Ready | Guardrails Active
+    </div>
+
+    <!-- FILE UPLOAD -->
+    <section class="upload-section">
+      <input 
+        type="file" 
+        id="fileInput" 
+        accept=".pdf,.doc,.docx,image/*" 
+      />
+      <button onclick="analyzeResume()">Analyze Resume</button>
+    </section>
+
+    <!-- QUICK ACTION BUTTONS -->
+    <section class="actions">
+      <button onclick="quickAction('skills')">🧠 Improve Skills</button>
+      <button onclick="quickAction('jobs')">💼 Find Jobs</button>
+      <button onclick="quickAction('roadmap')">🧭 Career Path</button>
+    </section>
+
+    <!-- CHATBOT UI -->
+    <section class="chat-container">
+
+      <div id="chat" class="chat-box"></div>
+
+      <!-- USER INPUT -->
+      <div class="chat-input">
+        <input 
+          type="text" 
+          id="userInput" 
+          placeholder="Ask about your resume, skills, or jobs..." 
+        />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+
+    </section>
+
+    <!-- LOADING INDICATOR -->
+    <div id="loading" class="hidden">
+      🤖 Securely analyzing your resume...
+    </div>
+
+    <!-- ERROR / REFUSAL BOX -->
+    <div id="errorBox" class="error hidden"></div>
+
+    <!-- SCORE VISUALIZATION -->
+    <section class="card">
+      <h3>📊 Resume Score</h3>
+      <canvas id="scoreChart"></canvas>
+    </section>
+
+    <!-- CAREER ROADMAP -->
+    <section class="card">
+      <h3>🧭 Career Roadmap</h3>
+      <div id="roadmap">
+        Upload your resume to generate a personalized roadmap...
+      </div>
+    </section>
+
+  </div>
+
+  <!-- MAIN SCRIPT (MODULE ENABLED FOR STRUCTURE) -->
+  <script type="module" src="script.js"></script>
+
+  <!-- INITIAL BOT MESSAGE -->
+  <script>
+    window.onload = () => {
+      const chat = document.getElementById("chat");
+
+      function fallbackMessage(msg) {
+        const div = document.createElement("div");
+        div.className = "message bot";
+        div.innerText = msg;
+        chat.appendChild(div);
+      }
+
+      if (typeof window.typingEffect === "function") {
+        window.typingEffect(
+          "🤖 Hello! I’m Impact-Bot 🚀\n\n" +
+          "I analyze resumes, detect skill gaps, and suggest jobs.\n\n" +
+          "Upload your resume to begin."
+        );
+      } else {
+        fallbackMessage("🤖 Upload your resume to get started.");
+      }
+    };
+  </script>
+
+</body>
+</html>
